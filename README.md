@@ -1,7 +1,9 @@
-# ✍️ humanizer
+# ✍️ slop-check
 
-> Removes signs of AI-generated writing from text — 45 patterns across structure, vocabulary, punctuation, and rhetoric.
+> Removes signs of AI-generated writing ("AI slop") from text — 45 patterns across structure, vocabulary, punctuation, and rhetoric.
 > Based on Wikipedia's "Signs of AI writing" guide, extended with tells from real-world AI-detector bypass research.
+>
+> Not affiliated with, and not to be confused with, other tools named "humanizer" (e.g. [blader/humanizer](https://github.com/blader/humanizer)).
 
 **[Claude Code](https://docs.claude.com/en/docs/claude-code) skill** · Markdown-based · Draft → audit → final rewrite loop
 
@@ -16,7 +18,7 @@
 
 ### What is this?
 
-`humanizer` is a reusable **Claude Code skill** that edits text to remove the statistical fingerprints of LLM writing — the constructions, vocabulary, and rhythms that make a paragraph read as machine-generated instead of human-written. It does not just delete AI-isms; it rewrites around them while preserving meaning, register, and the author's voice.
+`slop-check` is a reusable **Claude Code skill** that edits text to remove the statistical fingerprints of LLM writing — the constructions, vocabulary, and rhythms that make a paragraph read as machine-generated instead of human-written. It does not just delete AI-isms; it rewrites around them while preserving meaning, register, and the author's voice.
 
 The base of the skill is [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup — patterns observed across thousands of AI-generated Wikipedia edits. On top of that, this version adds patterns identified from AI-detector bypass research (rhetorical devices, structural artifacts, and technical leakage that Wikipedia's guide doesn't cover, since Wikipedia prose and general/marketing prose fail differently).
 
@@ -57,21 +59,21 @@ Give it a writing sample and it matches sentence length, word-choice level, punc
 This is a Claude Code skill. Clone it into your skills directory:
 
 ```bash
-git clone https://github.com/renatodpaula/humanizer.git ~/.claude/skills/humanizer
+git clone https://github.com/renatodpaula/slop-check.git ~/.claude/skills/slop-check
 ```
 
 Then invoke it in Claude Code:
 
 ```
-/humanizer
+/slop-check
 ```
 
-Or just paste text and ask to "humanize this," "make it not sound like AI," or "check for AI tells" — the skill triggers on intent.
+Or just paste text and ask to "check this for AI tells," "make it not sound like AI," or "humanize this" — the skill triggers on intent.
 
 ### Repository structure
 
 ```
-humanizer/
+slop-check/
 ├── SKILL.md      # the full skill: 45 patterns, voice calibration, process & output
 ├── README.md     # this file
 └── LICENSE       # MIT
@@ -79,7 +81,7 @@ humanizer/
 
 ### A narrower sibling for sales copy
 
-A separate, shorter checklist variant lives at the user level (`~/.claude/skills/humanizer`), scoped specifically to customer-facing copy — WhatsApp/email outreach, landing pages, CTAs — where the deliverable is a pass/fail verdict with an exact correction, not a full rewrite loop. It shares the em-dash and negative-parallelism rules with this skill but skips patterns that don't apply to short commercial copy (fractal summaries, colon-split headings, etc.).
+A separate, shorter checklist variant — still named `humanizer`, unrelated to this rename — lives at the user level (`~/.claude/skills/humanizer`), scoped specifically to customer-facing copy — WhatsApp/email outreach, landing pages, CTAs — where the deliverable is a pass/fail verdict with an exact correction, not a full rewrite loop. It shares the em-dash and negative-parallelism rules with this skill but skips patterns that don't apply to short commercial copy (fractal summaries, colon-split headings, etc.).
 
 ---
 
@@ -87,7 +89,9 @@ A separate, shorter checklist variant lives at the user level (`~/.claude/skills
 
 ### O que é isto?
 
-`humanizer` é uma **skill reusável de Claude Code** que edita texto pra remover as marcas estatísticas da escrita de LLM — as construções, o vocabulário e o ritmo que fazem um parágrafo soar gerado por máquina em vez de escrito por gente. Não só apaga os tiques de IA; reescreve em volta deles preservando sentido, registro e a voz do autor.
+`slop-check` é uma **skill reusável de Claude Code** que edita texto pra remover as marcas estatísticas da escrita de LLM — as construções, o vocabulário e o ritmo que fazem um parágrafo soar gerado por máquina em vez de escrito por gente. Não só apaga os tiques de IA; reescreve em volta deles preservando sentido, registro e a voz do autor.
+
+Não afiliado, e não deve ser confundido, com outras ferramentas chamadas "humanizer" (ex: [blader/humanizer](https://github.com/blader/humanizer)).
 
 A base da skill é o [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), mantido pela WikiProject AI Cleanup — padrões observados em milhares de edições geradas por IA na Wikipedia. Em cima disso, esta versão adiciona padrões identificados em pesquisa de bypass de detector de IA (dispositivos retóricos, artefatos estruturais e vazamento técnico que o guia da Wikipedia não cobre, já que prosa de Wikipedia e prosa geral/marketing falham de jeitos diferentes).
 
@@ -128,21 +132,21 @@ Dá uma amostra de escrita e ela casa tamanho de frase, nível de vocabulário, 
 Esta é uma skill de Claude Code. Clone no seu diretório de skills:
 
 ```bash
-git clone https://github.com/renatodpaula/humanizer.git ~/.claude/skills/humanizer
+git clone https://github.com/renatodpaula/slop-check.git ~/.claude/skills/slop-check
 ```
 
 Depois invoque no Claude Code:
 
 ```
-/humanizer
+/slop-check
 ```
 
-Ou só cole o texto e peça pra "humanizar isso", "tirar o cheiro de IA", ou "checar tique de IA" — a skill dispara por intenção.
+Ou só cole o texto e peça pra "checar tique de IA nisso", "tirar o cheiro de IA", ou "humanizar isso" — a skill dispara por intenção.
 
 ### Estrutura do repositório
 
 ```
-humanizer/
+slop-check/
 ├── SKILL.md      # a skill completa: 45 padrões, calibração de voz, processo & output
 ├── README.md     # este arquivo
 └── LICENSE       # MIT
@@ -150,7 +154,7 @@ humanizer/
 
 ### Uma irmã mais enxuta pra copy de venda
 
-Uma variante mais curta, em formato de checklist, mora no nível de usuário (`~/.claude/skills/humanizer`), escopada especificamente pra copy cliente-facing — abordagem de WhatsApp/e-mail, landing page, CTA — onde o entregável é um veredito aprovado/reprovado com correção exata, não um loop completo de reescrita. Compartilha a regra de travessão e negative parallelism com esta skill, mas pula padrões que não se aplicam a copy comercial curta (resumo fractal, título com dois-pontos, etc.).
+Uma variante mais curta, em formato de checklist — ainda chamada `humanizer`, sem relação com essa renomeação — mora no nível de usuário (`~/.claude/skills/humanizer`), escopada especificamente pra copy cliente-facing — abordagem de WhatsApp/e-mail, landing page, CTA — onde o entregável é um veredito aprovado/reprovado com correção exata, não um loop completo de reescrita. Compartilha a regra de travessão e negative parallelism com esta skill, mas pula padrões que não se aplicam a copy comercial curta (resumo fractal, título com dois-pontos, etc.).
 
 ---
 

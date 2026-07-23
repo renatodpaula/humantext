@@ -224,16 +224,16 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 **Formulas to watch:**
 
-| Pattern | Problem |
+| Pattern | Why it reads as manufactured |
 |---|---|
-| "Not because X. Because Y." / "Not because X, but because Y." | Telegraphed reversal |
-| "[X] isn't the problem. [Y] is." | Formulaic reframe |
-| "The answer isn't X. It's Y." | Predictable pivot |
-| "It feels like X. It's actually Y." | Setup/reveal cliché |
-| "The question isn't X. It's Y." | Rhetorical misdirection |
-| "stops being X and starts being Y" | False transformation arc |
-| "doesn't mean X, but actually Y" | Negation-then-assertion crutch |
-| "is about X but not Y" | False distinction |
+| "Not because X. Because Y." / "Not because X, but because Y." | The reversal is telegraphed a sentence early — just state Y. |
+| "[X] isn't the problem. [Y] is." | Same reveal-then-pivot shape, dressed up as insight. |
+| "The answer isn't X. It's Y." | Readers see the pivot coming before the second clause lands. |
+| "It feels like X. It's actually Y." | A setup-and-correct move that fakes a misdirection nobody had. |
+| "The question isn't X. It's Y." | Recasts a claim as a rhetorical question just to knock it down. |
+| "stops being X and starts being Y" | Implies a dramatic transformation that usually isn't one. |
+| "doesn't mean X, but actually Y" | Negates a strawman before making the real point. |
+| "is about X but not Y" | Draws a distinction the reader wasn't confused about. |
 
 **Instead:** State Y directly. "The problem is Y." Drop the negation entirely.
 
@@ -488,7 +488,7 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 ### 28. Signposting and Announcements
 
-**Phrases to watch:** Let's dive in, let's explore, let's break this down, here's what you need to know, now let's look at, without further ado, Hint:, Plot twist:, Spoiler:, you already know this but, but that's another post, let me walk you through, I want to explore
+**Phrases to watch:** Let's dive in, let's explore, let's break this down, here's what you need to know, now let's look at, without further ado, Plot twist:, let me walk you through
 
 **Problem:** LLMs announce what they are about to do instead of doing it. This meta-commentary slows the writing down and gives it a tutorial-script feel.
 
@@ -540,10 +540,10 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 > AlphaEvolve changed the search because it did not favor symmetry or human-looking designs. That made some of the older assumptions less useful.
 
 **Before (mic-drop template):**
-> Speed. Quality. Cost. You can only pick two. That's it. That's the tradeoff.
+> Scope. Budget. Deadline. You can protect two of the three. That's it. That's the whole negotiation.
 
 **After:**
-> Speed, quality, cost: pick two.
+> You get to protect two of scope, budget, and deadline. Pick which one gives.
 
 
 ### 32. Aphorism Formulas
@@ -561,7 +561,7 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 ### 33. Conversational Rhetorical Openers
 
-**Phrases to watch:** Honestly?, Look, Here's the thing, The thing is, Let's be honest, Real talk, It turns out, The uncomfortable truth is, The real [X] is, Let me be clear, The truth is,, I'll say it again:, I'm going to be honest, Can we talk about, when used as standalone hooks or fake-candid pauses before an ordinary point.
+**Phrases to watch:** Honestly?, Look, Here's the thing, The thing is, Let's be honest, Real talk, It turns out, The uncomfortable truth is, Let me be clear, when used as standalone hooks or fake-candid pauses before an ordinary point.
 
 **Problem:** LLMs open with a fake-candid hook to manufacture intimacy before delivering a routine claim. The tell is the theatrical pause-and-reveal: a one-word question or aside, then the "real" answer. A person being honest usually just says the thing.
 
@@ -724,104 +724,104 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 ### 46. False Agency
 
-**Problem:** Giving inanimate or abstract things human verbs — complaints don't "become" fixes, decisions don't "emerge," cultures don't "shift" on their own. A person does something to make those things happen; AI favors this construction because it avoids naming the actor. Distinct from Passive Voice (§13), which drops the actor entirely — false agency assigns the action to the wrong, non-human subject instead.
+**Problem:** LLMs assign human actions to abstract or inanimate subjects — a roadmap doesn't "decide" anything, a workflow doesn't "adapt" on its own, an outage doesn't "resolve itself." Someone made the call. This construction quietly skips naming who actually did the work. Distinct from Passive Voice (§13), which drops the actor entirely — false agency keeps a subject in the sentence, just hands the verb to the wrong one.
 
 **Patterns to watch:**
 
-| Pattern | Problem |
+| Pattern | What actually happened |
 |---|---|
-| "a complaint becomes a fix" | The complaint did nothing. Someone fixed it. |
-| "the decision emerges" | Decisions don't emerge. Someone decides. |
-| "the culture shifts" | Cultures don't shift on their own. People change behavior. |
-| "the conversation moves toward" | Conversations don't move. Someone steers. |
-| "the data tells us" | Data sits there. Someone reads it and draws a conclusion. |
-| "the market rewards" | Markets don't reward. Buyers pay for things. |
+| "the roadmap shifted" | Someone reprioritized it in a planning meeting. |
+| "the outage resolved itself" | An engineer found the bad deploy and rolled it back. |
+| "the process evolved" | The team changed the process after two failed launches. |
+| "the strategy pivoted" | Leadership killed the old plan and picked a new one. |
+| "feedback surfaced a gap" | A user reported it, and someone read the report. |
+| "trust eroded" | Customers stopped trusting the product after repeat outages. |
 
 **Before:**
-> The complaint becomes a fix within days, and the culture shifts toward faster iteration.
+> The roadmap shifted twice this quarter, and the process evolved to catch issues earlier.
 
 **After:**
-> The team turns complaints into fixes within days, which pushes everyone to iterate faster.
+> Leadership reprioritized the roadmap twice this quarter, and the team added a review step to catch issues earlier.
 
 
 ### 47. Narrator-from-a-Distance
 
-**Problem:** The writing floats above the scene instead of putting the reader in it — a lecturer's voice describing what "happens," rather than what you, specifically, experience.
+**Problem:** The prose floats above the situation instead of putting a specific person in it — a lecturing cadence describing what generally "happens," rather than what one person did or noticed.
 
-**Phrases to watch:** "Nobody designed this.", "This happens because...", "This is why...", "People tend to..."
+**Phrases to watch:** "This tends to happen when...", "It's common for...", "One finds that...", "This is often the case because..."
 
 **Before:**
-> Nobody designed this. This happens because incentives compound over time, and people tend to optimize for what gets measured.
+> This tends to happen when teams scale quickly. It's common for the original process to break down, and one finds that nobody notices until a deadline slips.
 
 **After:**
-> You didn't design this. It happened because whoever set the incentives rewarded the wrong number, and you optimized for it like anyone would.
+> We hit this at 40 people. The onboarding checklist stopped working, and nobody caught it until we missed a deadline.
 
 
 ### 48. Telling Instead of Showing
 
-**Problem:** The text announces that something is significant, hard, or important instead of demonstrating it with a specific detail. Related to Undue Emphasis on Significance (§1), but the tell here is a bare declarative sitting alone with nothing concrete backing it up.
+**Problem:** The text announces that something is significant or difficult instead of demonstrating it with a specific detail. Related to Undue Emphasis on Significance (§1), but the tell here is a bare declarative sitting alone with nothing concrete underneath it.
 
-**Phrases to watch:** "This is genuinely hard", "This is what leadership actually looks like", "actually matters", "The reasons are structural", "The implications are significant", "This is the deepest problem", "The stakes are high", "The consequences are real"
+**Phrases to watch:** "This is a big deal.", "It's a significant shift.", "The impact is substantial.", "This changes everything.", "The scale of this is hard to overstate."
 
 **Before:**
-> This is genuinely hard. The stakes are high, and the implications are significant.
+> This changes everything. The impact is substantial, and the scale is hard to overstate.
 
 **After:**
-> Getting this wrong means a week of downtime and a refund to every customer on the plan.
+> This adds forty hours of manual review to every release, which is why nobody wants to touch it.
 
 
 ## ABSOLUTES, ADVERBS, AND EMPHASIS
 
 ### 49. Lazy Extremes and Absolute Words
 
-**Words to watch:** every, always, never, everyone, everybody, nobody — used as sweeping claims rather than measured ones.
+**Words to watch:** every, always, never, everyone, everybody, nobody — used as a sweeping claim rather than a measured one.
 
-**Problem:** Absolute words manufacture false authority. A real writer with real knowledge of the exceptions tends to qualify or specify; reaching for "always" or "everyone" is often a sign nobody checked.
+**Problem:** Absolute words assert something is universally true instead of specifying who or how many. A writer with firsthand knowledge of the exceptions tends to qualify a claim; reaching for "always" or "everyone" is often a sign nobody checked whether it actually holds.
 
 **Before:**
-> Everyone struggles with this at some point, and it never gets easier without a system.
+> Every team hits this wall eventually, and it always slows them down.
 
 **After:**
-> Most people I've worked with struggle with this in their first year, and it gets easier once they build a system.
+> Three of the five teams I've worked with hit this wall in their second year, and it cost each of them a sprint.
 
 
 ### 50. Adverb Crutches
 
-**Words to watch:** really, just, literally, genuinely, honestly, simply, actually, deeply, truly, fundamentally, inherently, inevitably, interestingly, importantly, crucially
+**Words to watch:** really, actually, honestly, literally, simply, truly, deeply, fundamentally, essentially, basically, inherently, ultimately
 
-**Problem:** These adverbs add emphasis or hedging without adding information — the sentence means the same thing without them. Flag when several stack in the same piece; one instance in casual writing ("I genuinely don't know") is not on its own a tell — see DETECTION GUIDANCE.
+**Problem:** These adverbs add a feeling of emphasis or hedging without adding information — the sentence means the same thing with them removed. Flag when several stack in the same passage; one instance in casual writing ("I honestly don't know") is not on its own a tell — see DETECTION GUIDANCE.
 
 **Before:**
-> This is genuinely, truly one of the most fundamentally important shifts, and it honestly, really does matter.
+> This is essentially, fundamentally the biggest shift the team has seen, and it truly, really does change the roadmap.
 
 **After:**
-> This is one of the most important shifts, and it matters.
+> This is the biggest shift the team has seen, and it changes the roadmap.
 
 
 ### 51. Emphasis Crutches
 
-**Phrases to watch:** "Full stop.", "Period." (as a standalone emphasis sentence), "Let that sink in.", "This matters because", "Make no mistake", "Here's why that matters", "And that's okay." (as an unearned permission-granting closer)
+**Phrases to watch:** "Full stop.", "Period." (as a standalone one-word sentence for emphasis), "Let that sink in.", "Make no mistake,", "And that's saying something."
 
-**Problem:** These phrases perform gravitas instead of earning it — they tell the reader a point is important rather than making a point that is.
+**Problem:** These phrases perform gravitas instead of earning it — they tell the reader a point is important rather than making a point that already is.
 
 **Before:**
-> The team missed the deadline. Make no mistake, this matters. Let that sink in.
+> The team missed the deadline. Make no mistake, that's a problem. Let that sink in.
 
 **After:**
-> The team missed the deadline, and the launch slipped two weeks because of it.
+> The team missed the deadline, and the client noticed.
 
 
 ### 52. Sentence Starters to Avoid
 
 **Patterns to watch:** sentences opening with a Wh- word (What, When, Where, Which, Who, Why, How), paragraphs opening with "So", sentences opening with "Look,"
 
-**Problem:** Wh- openers ("What makes this hard is...") become a crutch for introducing a point indirectly instead of stating it. One instance is unremarkable; several across a piece is a rhythm tell.
+**Problem:** Wh- openers ("What made this hard was...") become a crutch for introducing a point indirectly instead of stating it. One instance is unremarkable; several across a piece is a rhythm tell.
 
 **Before:**
-> What makes this hard is the lack of a shared vocabulary. Why that matters is simple: teams talk past each other.
+> What made the migration hard was the missing test coverage. Why that mattered became clear during the rollback.
 
 **After:**
-> The lack of a shared vocabulary makes this hard. Teams talk past each other because of it.
+> The migration was hard because of missing test coverage. That became clear during the rollback.
 
 
 ## DETECTION GUIDANCE
@@ -952,3 +952,5 @@ Deliver the draft, the brief "still-AI" bullets, the final rewrite, and (optiona
 This skill is based on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. The patterns documented there come from observations of thousands of instances of AI-generated text on Wikipedia.
 
 Key insight from Wikipedia: "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
+
+Wikipedia's guide is written for encyclopedic editing, so it stops short of patterns that only show up in essays, blog posts, and marketing copy — rhetorical devices, structural artifacts, technical leakage, voice/agency problems, and absolute or emphasis-heavy wording. Those categories in this skill (§34-52) were developed by cataloging recurring tells across general-purpose AI writing and cross-checking them against the broader public discussion of LLM prose habits, then writing original examples for each.

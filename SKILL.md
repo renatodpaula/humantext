@@ -1,6 +1,6 @@
 ---
 name: slop-check
-version: 2.9.0
+version: 2.10.0
 description: |
   Remove signs of AI-generated writing ("AI slop") from text. Use when editing
   or reviewing text to make it sound more natural and human-written. Based on
@@ -195,6 +195,14 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 | comprehensive | full, complete |
 | journey (figurative) | process, (name the actual span of time) |
 | transformative / game-changing | (state what actually changed, with a number) |
+| unpack (an analysis) | explain, examine |
+| lean into | accept, embrace |
+| double down | commit, increase |
+| deep dive | analysis, examination |
+| take a step back | reconsider |
+| moving forward | next, from now |
+| circle back | return to, revisit |
+| on the same page | aligned, agreed |
 
 
 ### 8. Avoidance of "is"/"are" (Copula Avoidance)
@@ -212,7 +220,22 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 ### 9. Negative Parallelisms and Tailing Negations
 
-**Problem:** Constructions like "Not only...but..." or "It's not just about..., it's..." are overused. So are clipped tailing-negation fragments such as "no guessing" or "no wasted motion" tacked onto the end of a sentence instead of written as a real clause.
+**Problem:** Constructions like "Not only...but..." or "It's not just about..., it's..." are overused. So are clipped tailing-negation fragments such as "no guessing" or "no wasted motion" tacked onto the end of a sentence instead of written as a real clause. This formula has many surface variants; all reduce to the same telegraphed reversal.
+
+**Formulas to watch:**
+
+| Pattern | Problem |
+|---|---|
+| "Not because X. Because Y." / "Not because X, but because Y." | Telegraphed reversal |
+| "[X] isn't the problem. [Y] is." | Formulaic reframe |
+| "The answer isn't X. It's Y." | Predictable pivot |
+| "It feels like X. It's actually Y." | Setup/reveal cliché |
+| "The question isn't X. It's Y." | Rhetorical misdirection |
+| "stops being X and starts being Y" | False transformation arc |
+| "doesn't mean X, but actually Y" | Negation-then-assertion crutch |
+| "is about X but not Y" | False distinction |
+
+**Instead:** State Y directly. "The problem is Y." Drop the negation entirely.
 
 **Before:**
 > It's not just about the beat riding under the vocals; it's part of the aggression and atmosphere. It's not merely a song, it's a statement.
@@ -225,6 +248,12 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 **After:**
 > The options come from the selected item without forcing the user to guess.
+
+**Before (negative listing — a triple-negation variant of the same tell):**
+> Not a tool. Not a feature. A movement.
+
+**After:**
+> This is a movement, not a tool or a feature.
 
 
 ### 10. Rule of Three Overuse
@@ -459,7 +488,7 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 ### 28. Signposting and Announcements
 
-**Phrases to watch:** Let's dive in, let's explore, let's break this down, here's what you need to know, now let's look at, without further ado
+**Phrases to watch:** Let's dive in, let's explore, let's break this down, here's what you need to know, now let's look at, without further ado, Hint:, Plot twist:, Spoiler:, you already know this but, but that's another post, let me walk you through, I want to explore
 
 **Problem:** LLMs announce what they are about to do instead of doing it. This meta-commentary slows the writing down and gives it a tutorial-script feel.
 
@@ -502,13 +531,19 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 ### 31. Manufactured Punchlines and Staccato Drama
 
-**Problem:** LLMs often make every sentence land like a quotable closer, then stack short declarative fragments to manufacture drama. A single short sentence for emphasis is fine; a run of them starts to sound engineered.
+**Problem:** LLMs often make every sentence land like a quotable closer, then stack short declarative fragments to manufacture drama. A single short sentence for emphasis is fine; a run of them starts to sound engineered. A recurring exact template: "[Noun]. That's it. That's the [thing]." — performative simplicity dressed up as a mic-drop.
 
 **Before:**
 > Then AlphaEvolve arrived. It had no preference for symmetry. No aesthetic prior. No nostalgia for human taste. The old rules were gone.
 
 **After:**
 > AlphaEvolve changed the search because it did not favor symmetry or human-looking designs. That made some of the older assumptions less useful.
+
+**Before (mic-drop template):**
+> Speed. Quality. Cost. You can only pick two. That's it. That's the tradeoff.
+
+**After:**
+> Speed, quality, cost: pick two.
 
 
 ### 32. Aphorism Formulas
@@ -526,7 +561,7 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 
 ### 33. Conversational Rhetorical Openers
 
-**Phrases to watch:** Honestly?, Look, Here's the thing, The thing is, Let's be honest, Real talk, when used as standalone hooks or fake-candid pauses before an ordinary point.
+**Phrases to watch:** Honestly?, Look, Here's the thing, The thing is, Let's be honest, Real talk, It turns out, The uncomfortable truth is, The real [X] is, Let me be clear, The truth is,, I'll say it again:, I'm going to be honest, Can we talk about, when used as standalone hooks or fake-candid pauses before an ordinary point.
 
 **Problem:** LLMs open with a fake-candid hook to manufacture intimacy before delivering a routine claim. The tell is the theatrical pause-and-reveal: a one-word question or aside, then the "real" answer. A person being honest usually just says the thing.
 
@@ -685,6 +720,110 @@ Before returning the final rewrite, scan it for `—` and `–`. Any hit means t
 **After:** Use a name outside the recurring pool, or better, use a real example instead of an invented one.
 
 
+## VOICE AND AGENCY
+
+### 46. False Agency
+
+**Problem:** Giving inanimate or abstract things human verbs — complaints don't "become" fixes, decisions don't "emerge," cultures don't "shift" on their own. A person does something to make those things happen; AI favors this construction because it avoids naming the actor. Distinct from Passive Voice (§13), which drops the actor entirely — false agency assigns the action to the wrong, non-human subject instead.
+
+**Patterns to watch:**
+
+| Pattern | Problem |
+|---|---|
+| "a complaint becomes a fix" | The complaint did nothing. Someone fixed it. |
+| "the decision emerges" | Decisions don't emerge. Someone decides. |
+| "the culture shifts" | Cultures don't shift on their own. People change behavior. |
+| "the conversation moves toward" | Conversations don't move. Someone steers. |
+| "the data tells us" | Data sits there. Someone reads it and draws a conclusion. |
+| "the market rewards" | Markets don't reward. Buyers pay for things. |
+
+**Before:**
+> The complaint becomes a fix within days, and the culture shifts toward faster iteration.
+
+**After:**
+> The team turns complaints into fixes within days, which pushes everyone to iterate faster.
+
+
+### 47. Narrator-from-a-Distance
+
+**Problem:** The writing floats above the scene instead of putting the reader in it — a lecturer's voice describing what "happens," rather than what you, specifically, experience.
+
+**Phrases to watch:** "Nobody designed this.", "This happens because...", "This is why...", "People tend to..."
+
+**Before:**
+> Nobody designed this. This happens because incentives compound over time, and people tend to optimize for what gets measured.
+
+**After:**
+> You didn't design this. It happened because whoever set the incentives rewarded the wrong number, and you optimized for it like anyone would.
+
+
+### 48. Telling Instead of Showing
+
+**Problem:** The text announces that something is significant, hard, or important instead of demonstrating it with a specific detail. Related to Undue Emphasis on Significance (§1), but the tell here is a bare declarative sitting alone with nothing concrete backing it up.
+
+**Phrases to watch:** "This is genuinely hard", "This is what leadership actually looks like", "actually matters", "The reasons are structural", "The implications are significant", "This is the deepest problem", "The stakes are high", "The consequences are real"
+
+**Before:**
+> This is genuinely hard. The stakes are high, and the implications are significant.
+
+**After:**
+> Getting this wrong means a week of downtime and a refund to every customer on the plan.
+
+
+## ABSOLUTES, ADVERBS, AND EMPHASIS
+
+### 49. Lazy Extremes and Absolute Words
+
+**Words to watch:** every, always, never, everyone, everybody, nobody — used as sweeping claims rather than measured ones.
+
+**Problem:** Absolute words manufacture false authority. A real writer with real knowledge of the exceptions tends to qualify or specify; reaching for "always" or "everyone" is often a sign nobody checked.
+
+**Before:**
+> Everyone struggles with this at some point, and it never gets easier without a system.
+
+**After:**
+> Most people I've worked with struggle with this in their first year, and it gets easier once they build a system.
+
+
+### 50. Adverb Crutches
+
+**Words to watch:** really, just, literally, genuinely, honestly, simply, actually, deeply, truly, fundamentally, inherently, inevitably, interestingly, importantly, crucially
+
+**Problem:** These adverbs add emphasis or hedging without adding information — the sentence means the same thing without them. Flag when several stack in the same piece; one instance in casual writing ("I genuinely don't know") is not on its own a tell — see DETECTION GUIDANCE.
+
+**Before:**
+> This is genuinely, truly one of the most fundamentally important shifts, and it honestly, really does matter.
+
+**After:**
+> This is one of the most important shifts, and it matters.
+
+
+### 51. Emphasis Crutches
+
+**Phrases to watch:** "Full stop.", "Period." (as a standalone emphasis sentence), "Let that sink in.", "This matters because", "Make no mistake", "Here's why that matters", "And that's okay." (as an unearned permission-granting closer)
+
+**Problem:** These phrases perform gravitas instead of earning it — they tell the reader a point is important rather than making a point that is.
+
+**Before:**
+> The team missed the deadline. Make no mistake, this matters. Let that sink in.
+
+**After:**
+> The team missed the deadline, and the launch slipped two weeks because of it.
+
+
+### 52. Sentence Starters to Avoid
+
+**Patterns to watch:** sentences opening with a Wh- word (What, When, Where, Which, Who, Why, How), paragraphs opening with "So", sentences opening with "Look,"
+
+**Problem:** Wh- openers ("What makes this hard is...") become a crutch for introducing a point indirectly instead of stating it. One instance is unremarkable; several across a piece is a rhythm tell.
+
+**Before:**
+> What makes this hard is the lack of a shared vocabulary. Why that matters is simple: teams talk past each other.
+
+**After:**
+> The lack of a shared vocabulary makes this hard. Teams talk past each other because of it.
+
+
 ## DETECTION GUIDANCE
 
 ### What NOT to flag (false positives)
@@ -730,6 +869,23 @@ The rewrite itself can fail in ways that are just as recognizable as the origina
 - **Don't fake casualness with typos.** Scattered misspellings read as carelessness, not humanity. Casualness comes from register, rhythm, and word choice, not errors.
 - **Don't scrub personality along with the tells.** A flat, tell-free text is still AI-shaped. See PERSONALITY AND SOUL above.
 - **Don't compress every long sentence.** Real writing mixes short and long; forcing everything to a uniform length just trades one mechanical pattern for another.
+
+
+---
+
+## OPTIONAL QUICK SCORE
+
+For a fast, numeric gate before doing a full pattern-by-pattern pass — useful when triaging a lot of text or deciding whether a piece needs a rewrite at all — rate the draft 1-10 on each dimension:
+
+| Dimension | Question |
+|---|---|
+| Directness | Statements or announcements? |
+| Rhythm | Varied or metronomic? |
+| Trust | Respects reader intelligence? |
+| Authenticity | Sounds human? |
+| Density | Anything cuttable? |
+
+Below 35/50: run the full Process and Output loop below. This score is a triage shortcut, not a replacement for the pattern list — a text can score above 35 and still contain a specific, fixable tell worth calling out.
 
 
 ---

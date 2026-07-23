@@ -1,16 +1,17 @@
 # ✍️ slop-check
 
-> Removes signs of AI-generated writing ("AI slop") from text — 45 patterns across structure, vocabulary, punctuation, and rhetoric.
-> Based on Wikipedia's "Signs of AI writing" guide, extended with tells from real-world AI-detector bypass research.
->
-> Not affiliated with, and not to be confused with, other tools named "humanizer" (e.g. [blader/humanizer](https://github.com/blader/humanizer)).
+> Removes signs of AI-generated writing ("AI slop") from text — 52 patterns across structure, vocabulary, punctuation, rhetoric, voice, and agency.
+> Based on Wikipedia's "Signs of AI writing" guide, extended with additional structural, rhetorical, and technical-leakage tells.
 
 **[Claude Code](https://docs.claude.com/en/docs/claude-code) skill** · Markdown-based · Draft → audit → final rewrite loop
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skill](https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2)](https://docs.claude.com/en/docs/claude-code)
+[![Wiki](https://img.shields.io/badge/docs-Wiki-blue)](https://github.com/renatodpaula/slop-check/wiki)
 
 🌐 **Languages / Idiomas:** **[English](#-english)** · **[Português](#-português)**
+
+📖 **Full documentation:** [**Project Wiki →**](https://github.com/renatodpaula/slop-check/wiki)
 
 ---
 
@@ -20,9 +21,9 @@
 
 `slop-check` is a reusable **Claude Code skill** that edits text to remove the statistical fingerprints of LLM writing — the constructions, vocabulary, and rhythms that make a paragraph read as machine-generated instead of human-written. It does not just delete AI-isms; it rewrites around them while preserving meaning, register, and the author's voice.
 
-The base of the skill is [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup — patterns observed across thousands of AI-generated Wikipedia edits. On top of that, this version adds patterns identified from AI-detector bypass research (rhetorical devices, structural artifacts, and technical leakage that Wikipedia's guide doesn't cover, since Wikipedia prose and general/marketing prose fail differently).
+The base of the skill is [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup — patterns observed across thousands of AI-generated Wikipedia edits. On top of that, this skill adds patterns that Wikipedia's guide doesn't cover, since encyclopedic prose and general/marketing/essay prose fail in different ways: rhetorical devices, structural artifacts, technical leakage, voice and agency problems, and absolute/emphasis words.
 
-### Why 45 patterns and not one prompt
+### Why 52 patterns and not one prompt
 
 A single instruction like "make this sound human" doesn't work — the model doesn't know which of its own habits to distrust. This skill instead names the tell, shows a before/after, and states the fix as a rule, so the check is mechanical rather than a matter of taste. Isolated tells (one em dash, one "however," curly quotes) are explicitly **not** flagged — see `DETECTION GUIDANCE` in `SKILL.md`. Only clusters of tells indicate AI authorship.
 
@@ -37,9 +38,11 @@ A single instruction like "make this sound human" doesn't work — the model doe
 | Filler & hedging | filler phrases, excessive hedging, generic conclusions, signposting, aphorism formulas |
 | Rhetorical devices | rhetorical Q&A, manufactured suspense, analogy reflex, invented concept labels, anaphora, dead metaphor flogging, both-sidesing |
 | Structural artifacts | fractal summaries, prompt echo, colon-split headings |
-| Technical leakage | markdown residue in plain-text contexts, unfilled placeholders, leftover chatbot UTM parameters, clustered default names (Emily/Sarah) |
+| Technical leakage | markdown residue in plain-text contexts, unfilled placeholders, leftover chatbot UTM parameters, clustered default names |
+| Voice & agency | false agency (inanimate subjects doing human verbs), narrator-from-a-distance, telling instead of showing |
+| Absolutes, adverbs & emphasis | lazy extremes (always/never/everyone), adverb crutches, emphasis crutches, Wh- sentence starters |
 
-Full detail, before/after examples, and the complete vocabulary swap list live in `SKILL.md`.
+Full detail, before/after examples, and the complete vocabulary swap list live in `SKILL.md`. An optional 1-10 × 5-dimension quick-score rubric (Directness, Rhythm, Trust, Authenticity, Density) is also in there, for triaging a lot of text before doing a full pattern pass.
 
 ### How it works
 
@@ -68,20 +71,20 @@ Then invoke it in Claude Code:
 /slop-check
 ```
 
-Or just paste text and ask to "check this for AI tells," "make it not sound like AI," or "humanize this" — the skill triggers on intent.
+Or just paste text and ask to "check this for AI tells," "make it not sound like AI," or "clean up this draft" — the skill triggers on intent.
 
 ### Repository structure
 
 ```
 slop-check/
-├── SKILL.md      # the full skill: 45 patterns, voice calibration, process & output
+├── SKILL.md      # the full skill: 52 patterns, voice calibration, process & output
 ├── README.md     # this file
 └── LICENSE       # MIT
 ```
 
-### A narrower sibling for sales copy
+### Full documentation
 
-A separate, shorter checklist variant — still named `humanizer`, unrelated to this rename — lives at the user level (`~/.claude/skills/humanizer`), scoped specifically to customer-facing copy — WhatsApp/email outreach, landing pages, CTAs — where the deliverable is a pass/fail verdict with an exact correction, not a full rewrite loop. It shares the em-dash and negative-parallelism rules with this skill but skips patterns that don't apply to short commercial copy (fractal summaries, colon-split headings, etc.).
+The complete pattern-by-pattern reference, with every before/after example, lives in the [**Wiki**](https://github.com/renatodpaula/slop-check/wiki).
 
 ---
 
@@ -91,11 +94,9 @@ A separate, shorter checklist variant — still named `humanizer`, unrelated to 
 
 `slop-check` é uma **skill reusável de Claude Code** que edita texto pra remover as marcas estatísticas da escrita de LLM — as construções, o vocabulário e o ritmo que fazem um parágrafo soar gerado por máquina em vez de escrito por gente. Não só apaga os tiques de IA; reescreve em volta deles preservando sentido, registro e a voz do autor.
 
-Não afiliado, e não deve ser confundido, com outras ferramentas chamadas "humanizer" (ex: [blader/humanizer](https://github.com/blader/humanizer)).
+A base da skill é o [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), mantido pela WikiProject AI Cleanup — padrões observados em milhares de edições geradas por IA na Wikipedia. Em cima disso, esta skill adiciona padrões que o guia da Wikipedia não cobre, já que prosa enciclopédica e prosa geral/marketing/ensaio falham de jeitos diferentes: dispositivos retóricos, artefatos estruturais, vazamento técnico, problemas de voz e agência, e palavras absolutas/de ênfase.
 
-A base da skill é o [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), mantido pela WikiProject AI Cleanup — padrões observados em milhares de edições geradas por IA na Wikipedia. Em cima disso, esta versão adiciona padrões identificados em pesquisa de bypass de detector de IA (dispositivos retóricos, artefatos estruturais e vazamento técnico que o guia da Wikipedia não cobre, já que prosa de Wikipedia e prosa geral/marketing falham de jeitos diferentes).
-
-### Por que 45 padrões e não um prompt só
+### Por que 52 padrões e não um prompt só
 
 Uma instrução única tipo "deixa isso mais humano" não funciona — o modelo não sabe de qual hábito próprio desconfiar. Esta skill nomeia o tique, mostra um antes/depois, e declara a correção como regra, então o check vira mecânico em vez de questão de gosto. Tique isolado (um travessão, um "porém", aspas curvas) explicitamente **não** reprova — ver `DETECTION GUIDANCE` no `SKILL.md`. Só cluster de tiques indica autoria de IA.
 
@@ -110,9 +111,11 @@ Uma instrução única tipo "deixa isso mais humano" não funciona — o modelo 
 | Enchimento & hedging | frase de enchimento, hedge excessivo, conclusão genérica, signposting, fórmula de aforismo |
 | Dispositivos retóricos | Q&A retórico, suspense fabricado, reflexo de analogia, rótulo de conceito inventado, anáfora, metáfora flagelada, both-sidesing |
 | Artefatos estruturais | resumo fractal, eco do prompt, título com dois-pontos |
-| Vazamento técnico | markdown sobrando em texto puro, placeholder não preenchido, UTM de chatbot esquecido, nome-clichê de personagem inventado (Emily/Sarah) |
+| Vazamento técnico | markdown sobrando em texto puro, placeholder não preenchido, UTM de chatbot esquecido, nome-clichê de personagem inventado |
+| Voz & agência | agência falsa (sujeito inanimado fazendo verbo de gente), narrador à distância, contar em vez de mostrar |
+| Absolutos, advérbios & ênfase | extremo preguiçoso (sempre/nunca/todo mundo), muleta de advérbio, muleta de ênfase, início de frase com Wh- |
 
-Detalhe completo, exemplos antes/depois e a lista de troca de vocabulário estão no `SKILL.md`.
+Detalhe completo, exemplos antes/depois e a lista de troca de vocabulário estão no `SKILL.md`. Uma rubrica opcional de score rápido (1-10 × 5 dimensões: Directness, Rhythm, Trust, Authenticity, Density) também está lá, pra triagem de bastante texto antes de rodar a passada completa.
 
 ### Como funciona
 
@@ -141,20 +144,20 @@ Depois invoque no Claude Code:
 /slop-check
 ```
 
-Ou só cole o texto e peça pra "checar tique de IA nisso", "tirar o cheiro de IA", ou "humanizar isso" — a skill dispara por intenção.
+Ou só cole o texto e peça pra "checar tique de IA nisso", "tirar o cheiro de IA", ou "limpar esse rascunho" — a skill dispara por intenção.
 
 ### Estrutura do repositório
 
 ```
 slop-check/
-├── SKILL.md      # a skill completa: 45 padrões, calibração de voz, processo & output
+├── SKILL.md      # a skill completa: 52 padrões, calibração de voz, processo & output
 ├── README.md     # este arquivo
 └── LICENSE       # MIT
 ```
 
-### Uma irmã mais enxuta pra copy de venda
+### Documentação completa
 
-Uma variante mais curta, em formato de checklist — ainda chamada `humanizer`, sem relação com essa renomeação — mora no nível de usuário (`~/.claude/skills/humanizer`), escopada especificamente pra copy cliente-facing — abordagem de WhatsApp/e-mail, landing page, CTA — onde o entregável é um veredito aprovado/reprovado com correção exata, não um loop completo de reescrita. Compartilha a regra de travessão e negative parallelism com esta skill, mas pula padrões que não se aplicam a copy comercial curta (resumo fractal, título com dois-pontos, etc.).
+A referência completa padrão-por-padrão, com todo exemplo antes/depois, está na [**Wiki**](https://github.com/renatodpaula/slop-check/wiki).
 
 ---
 

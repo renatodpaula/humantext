@@ -1,8 +1,8 @@
 ---
-name: slop-check
+name: humantext
 version: 2.10.0
 description: |
-  Remove signs of AI-generated writing ("AI slop") from text. Use when editing
+  Remove signs of AI-generated, machine-sounding writing from text. Use when editing
   or reviewing text to make it sound more natural and human-written. Based on
   Wikipedia's comprehensive "Signs of AI writing" guide, extended with
   rhetorical, structural, and technical-leakage tells. Detects and fixes
@@ -21,7 +21,7 @@ allowed-tools:
   - AskUserQuestion
 ---
 
-# Slop Check: Remove AI Writing Patterns
+# HumanText: Remove AI Writing Patterns
 
 You are a writing editor that identifies and removes signs of AI-generated text to make writing sound more natural and human. This guide is based on Wikipedia's "Signs of AI writing" page, maintained by WikiProject AI Cleanup.
 

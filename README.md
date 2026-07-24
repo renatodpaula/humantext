@@ -1,17 +1,17 @@
-# ✍️ slop-check
+# ✍️ humantext
 
-> Removes signs of AI-generated writing ("AI slop") from text — 52 patterns across structure, vocabulary, punctuation, rhetoric, voice, and agency.
+> Removes signs of AI-generated, machine-sounding writing from text — 52 patterns across structure, vocabulary, punctuation, rhetoric, voice, and agency.
 > Based on Wikipedia's "Signs of AI writing" guide, extended with additional structural, rhetorical, and technical-leakage tells.
 
 **[Claude Code](https://docs.claude.com/en/docs/claude-code) skill** · Markdown-based · Draft → audit → final rewrite loop
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Skill](https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2)](https://docs.claude.com/en/docs/claude-code)
-[![Wiki](https://img.shields.io/badge/docs-Wiki-blue)](https://github.com/renatodpaula/slop-check/wiki)
+[![Wiki](https://img.shields.io/badge/docs-Wiki-blue)](https://github.com/renatodpaula/humantext/wiki)
 
 🌐 **Languages / Idiomas:** **[English](#-english)** · **[Português](#-português)**
 
-📖 **Full documentation:** [**Project Wiki →**](https://github.com/renatodpaula/slop-check/wiki)
+📖 **Full documentation:** [**Project Wiki →**](https://github.com/renatodpaula/humantext/wiki)
 
 ---
 
@@ -19,7 +19,7 @@
 
 ### What is this?
 
-`slop-check` is a reusable **Claude Code skill** that edits text to remove the statistical fingerprints of LLM writing — the constructions, vocabulary, and rhythms that make a paragraph read as machine-generated instead of human-written. It does not just delete AI-isms; it rewrites around them while preserving meaning, register, and the author's voice.
+`humantext` is a reusable **Claude Code skill** that edits text to remove the statistical fingerprints of LLM writing — the constructions, vocabulary, and rhythms that make a paragraph read as machine-generated instead of human-written. It does not just delete AI-isms; it rewrites around them while preserving meaning, register, and the author's voice.
 
 The base of the skill is [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup — patterns observed across thousands of AI-generated Wikipedia edits. On top of that, this skill adds patterns that Wikipedia's guide doesn't cover, since encyclopedic prose and general/marketing/essay prose fail in different ways: rhetorical devices, structural artifacts, technical leakage, voice and agency problems, and absolute/emphasis words.
 
@@ -62,13 +62,13 @@ Give it a writing sample and it matches sentence length, word-choice level, punc
 This is a Claude Code skill. Clone it into your skills directory:
 
 ```bash
-git clone https://github.com/renatodpaula/slop-check.git ~/.claude/skills/slop-check
+git clone https://github.com/renatodpaula/humantext.git ~/.claude/skills/humantext
 ```
 
 Then invoke it in Claude Code:
 
 ```
-/slop-check
+/humantext
 ```
 
 Or just paste text and ask to "check this for AI tells," "make it not sound like AI," or "clean up this draft" — the skill triggers on intent.
@@ -76,7 +76,7 @@ Or just paste text and ask to "check this for AI tells," "make it not sound like
 ### Repository structure
 
 ```
-slop-check/
+humantext/
 ├── SKILL.md      # the full skill: 52 patterns, voice calibration, process & output
 ├── README.md     # this file
 └── LICENSE       # MIT
@@ -84,7 +84,7 @@ slop-check/
 
 ### Full documentation
 
-The complete pattern-by-pattern reference, with every before/after example, lives in the [**Wiki**](https://github.com/renatodpaula/slop-check/wiki).
+The complete pattern-by-pattern reference, with every before/after example, lives in the [**Wiki**](https://github.com/renatodpaula/humantext/wiki).
 
 ---
 
@@ -92,7 +92,7 @@ The complete pattern-by-pattern reference, with every before/after example, live
 
 ### O que é isto?
 
-`slop-check` é uma **skill reusável de Claude Code** que edita texto pra remover as marcas estatísticas da escrita de LLM — as construções, o vocabulário e o ritmo que fazem um parágrafo soar gerado por máquina em vez de escrito por gente. Não só apaga os tiques de IA; reescreve em volta deles preservando sentido, registro e a voz do autor.
+`humantext` é uma **skill reusável de Claude Code** que edita texto pra remover as marcas estatísticas da escrita de LLM — as construções, o vocabulário e o ritmo que fazem um parágrafo soar gerado por máquina em vez de escrito por gente. Não só apaga os tiques de IA; reescreve em volta deles preservando sentido, registro e a voz do autor.
 
 A base da skill é o [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), mantido pela WikiProject AI Cleanup — padrões observados em milhares de edições geradas por IA na Wikipedia. Em cima disso, esta skill adiciona padrões que o guia da Wikipedia não cobre, já que prosa enciclopédica e prosa geral/marketing/ensaio falham de jeitos diferentes: dispositivos retóricos, artefatos estruturais, vazamento técnico, problemas de voz e agência, e palavras absolutas/de ênfase.
 
@@ -135,13 +135,13 @@ Dá uma amostra de escrita e ela casa tamanho de frase, nível de vocabulário, 
 Esta é uma skill de Claude Code. Clone no seu diretório de skills:
 
 ```bash
-git clone https://github.com/renatodpaula/slop-check.git ~/.claude/skills/slop-check
+git clone https://github.com/renatodpaula/humantext.git ~/.claude/skills/humantext
 ```
 
 Depois invoque no Claude Code:
 
 ```
-/slop-check
+/humantext
 ```
 
 Ou só cole o texto e peça pra "checar tique de IA nisso", "tirar o cheiro de IA", ou "limpar esse rascunho" — a skill dispara por intenção.
@@ -149,7 +149,7 @@ Ou só cole o texto e peça pra "checar tique de IA nisso", "tirar o cheiro de I
 ### Estrutura do repositório
 
 ```
-slop-check/
+humantext/
 ├── SKILL.md      # a skill completa: 52 padrões, calibração de voz, processo & output
 ├── README.md     # este arquivo
 └── LICENSE       # MIT
@@ -157,7 +157,7 @@ slop-check/
 
 ### Documentação completa
 
-A referência completa padrão-por-padrão, com todo exemplo antes/depois, está na [**Wiki**](https://github.com/renatodpaula/slop-check/wiki).
+A referência completa padrão-por-padrão, com todo exemplo antes/depois, está na [**Wiki**](https://github.com/renatodpaula/humantext/wiki).
 
 ---
 
